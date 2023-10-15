@@ -1,6 +1,7 @@
 package com.muratkaplan.wisdompet.web.rest;
 
 import com.muratkaplan.wisdompet.services.ProductService;
+import com.muratkaplan.wisdompet.web.errors.BadRequestException;
 import com.muratkaplan.wisdompet.web.models.Product;
 import jakarta.websocket.server.PathParam;
 import lombok.RequiredArgsConstructor;
@@ -27,5 +28,18 @@ public class ProductRestController {
     @GetMapping("/{id}")
     public Product getProduct(@PathVariable("id") Long id){
         return productService.getProductById(id);
+    }
+    @PutMapping("/{id}")
+    public Product updateProduct(@PathVariable("id") Long id,@RequestBody Product product){
+        if(!id.equals(product.getProductId())){
+            throw new BadRequestException("Product id does not match");
+        }
+        product.setProductId(id);
+        return productService.createOrUpdateProduct(product);
+    }
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteProduct(@PathVariable("id") Long id){
+        productService.deleteProductById(id);
     }
 }
