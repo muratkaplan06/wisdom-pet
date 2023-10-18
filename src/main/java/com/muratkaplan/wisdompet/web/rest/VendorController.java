@@ -30,10 +30,10 @@ public class VendorController {
     }
     @PutMapping("/{id}")
     public Vendor updateVendor(@PathVariable("id") Long id,@RequestBody Vendor vendor){
-        if(!id.equals(vendor.getVendorId())){
+        if(!id.equals(vendor.getId())){
             throw new BadRequestException("Vendor id does not match");
         }
-        vendor.setVendorId(id);
+        vendor.setId(id);
         return vendorService.createOrUpdateVendor(vendor);
     }
     @DeleteMapping("/{id}")

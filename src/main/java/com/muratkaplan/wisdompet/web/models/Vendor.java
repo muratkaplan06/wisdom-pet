@@ -12,7 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class Vendor {
-    public Long vendorId;
+    public Long id;
     public String name;
     public String contact;
     public String phone;

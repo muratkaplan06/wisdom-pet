@@ -6,6 +6,8 @@ import com.muratkaplan.wisdompet.data.repositories.ProductRepository;
 import com.muratkaplan.wisdompet.web.errors.NotFoundException;
 import com.muratkaplan.wisdompet.web.models.Customer;
 import com.muratkaplan.wisdompet.web.models.Product;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -43,7 +45,7 @@ public class ProductService {
 
     private ProductEntity translateWebToDb(Product product) {
         ProductEntity entity = new ProductEntity();
-        entity.setId(product.getProductId());
+        entity.setId(product.getId());
         entity.setName(product.getName());
         entity.setPrice(product.getPrice());
         entity.setVendorId(product.getVendorId());

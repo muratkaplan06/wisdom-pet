@@ -51,7 +51,7 @@ public class CustomerService {
     }
     private CustomerEntity translateWebToDb(Customer customer) {
         CustomerEntity entity = new CustomerEntity();
-        entity.setId(customer.getCustomerId());
+        entity.setId(customer.getId());
         entity.setFirstName(customer.getFirstName());
         entity.setLastName(customer.getLastName());
         entity.setEmail(customer.getEmail());

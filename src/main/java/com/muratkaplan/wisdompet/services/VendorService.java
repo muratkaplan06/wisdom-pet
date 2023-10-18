@@ -40,7 +40,7 @@ public class VendorService {
 
     public VendorEntity translateWebToDb(Vendor vendor){
         VendorEntity entity = new VendorEntity();
-        entity.setId(vendor.getVendorId());
+        entity.setId(vendor.getId());
         entity.setName(vendor.getName());
         entity.setContact(vendor.getContact());
         entity.setPhone(vendor.getPhone());

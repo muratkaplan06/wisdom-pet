@@ -31,10 +31,10 @@ public class ServiceController {
     }
     @PutMapping("/{id}")
     public Service updateService(@PathVariable("id") Long id,@RequestBody Service service){
-        if(!id.equals(service.getServiceId())){
+        if(!id.equals(service.getId())){
             throw new BadRequestException("Service id does not match");
         }
-        service.setServiceId(id);
+        service.setId(id);
         return serviceService.createOrUpdateService(service);
     }
     @DeleteMapping("/{id}")

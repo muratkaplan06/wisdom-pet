@@ -31,10 +31,10 @@ public class CustomerRestController {
     }
     @PutMapping("/{id}")
     public Customer updateCustomer(@PathVariable("id") Long id, @RequestBody Customer customer){
-        if(!id.equals(customer.getCustomerId())){
+        if(!id.equals(customer.getId())){
             throw new BadRequestException("Customer id does not match");
         }
-        customer.setCustomerId(id);
+        customer.setId(id);
         return customerService.createOrUpdateCustomer(customer);
     }
     @DeleteMapping("/{id}")

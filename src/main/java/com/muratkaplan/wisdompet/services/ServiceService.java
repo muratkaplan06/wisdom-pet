@@ -40,7 +40,7 @@ public class ServiceService {
 
     private ServiceEntity translateWebToDb(Service service) {
         ServiceEntity entity = new ServiceEntity();
-        entity.setId(service.getServiceId());
+        entity.setId(service.getId());
         entity.setName(service.getName());
         entity.setPrice(service.getPrice());
         return entity;

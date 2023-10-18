@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class Service {
-    public Long serviceId;
+    public Long id;
     public String name;
     public BigDecimal price;
 }
