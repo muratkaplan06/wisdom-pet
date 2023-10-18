@@ -3,7 +3,6 @@ package com.muratkaplan.wisdompet.web.rest;
 import com.muratkaplan.wisdompet.services.ServiceService;
 import com.muratkaplan.wisdompet.web.errors.BadRequestException;
 import com.muratkaplan.wisdompet.web.models.Service;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

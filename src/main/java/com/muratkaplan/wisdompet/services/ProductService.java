@@ -1,15 +1,10 @@
 package com.muratkaplan.wisdompet.services;
 
-import com.muratkaplan.wisdompet.data.entities.CustomerEntity;
 import com.muratkaplan.wisdompet.data.entities.ProductEntity;
 import com.muratkaplan.wisdompet.data.repositories.ProductRepository;
 import com.muratkaplan.wisdompet.web.errors.NotFoundException;
-import com.muratkaplan.wisdompet.web.models.Customer;
 import com.muratkaplan.wisdompet.web.models.Product;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 

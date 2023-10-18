@@ -3,12 +3,9 @@ package com.muratkaplan.wisdompet.web.rest;
 import com.muratkaplan.wisdompet.services.ProductService;
 import com.muratkaplan.wisdompet.web.errors.BadRequestException;
 import com.muratkaplan.wisdompet.web.models.Product;
-import jakarta.websocket.server.PathParam;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
